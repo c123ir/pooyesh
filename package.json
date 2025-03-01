@@ -3,13 +3,16 @@
   "private": true,
   "version": "0.0.0",
   "type": "commonjs",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "start": "node server.js"
-  },
+"scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "lint": "eslint .",
+  "preview": "vite preview",
+  "start": "node server.js",
+  "create-db": "node src/db/create-db.js",
+  "seed-db": "node src/db/seed-db.js",
+  "setup-db": "npm run create-db && npm run seed-db"
+},
   "dependencies": {
     "@headlessui/react": "^1.7.18",
     "@hookform/resolvers": "^3.3.4",
